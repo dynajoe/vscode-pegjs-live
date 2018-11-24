@@ -1,0 +1,52 @@
+{
+    "name": "vscode-pegjs",
+    "displayName": "vscode-pegjs",
+    "description": "Live preview PEG.js Grammars.",
+    "version": "0.0.1",
+    "publisher": "joeandaverde",
+    "engines": {
+        "vscode": "^1.29.0"
+    },
+    "categories": [
+        "Debuggers",
+        "Programming Languages"
+    ],
+    "galleryBanner": {
+        "color": "#234d6b",
+        "theme": "light"
+    },
+    "activationEvents": [
+        "onCommand:editor.pegjsLive",
+        "onCommand:editor.pegjsLiveFromHere"
+    ],
+    "main": "./dist/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "editor.pegjsLive",
+                "title": "PEG.js Live"
+            },
+            {
+                "command": "editor.pegjsLiveFromHere",
+                "title": "PEG.js Live From Here"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run build",
+        "build": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run build && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.21",
+        "tslint": "^5.8.0",
+        "@types/node": "^8.10.25",
+        "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "pegjs": "^0.10.0"
+    }
+}
