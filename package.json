@@ -2,6 +2,7 @@
     "name": "vscode-pegjs-live",
     "displayName": "PEG.js Live",
     "description": "Live preview PEG.js Grammars.",
+    "keywords": ["pegjs", "peg", "parser"],
     "version": "0.0.1",
     "publisher": "joeandaverde",
     "engines": {
