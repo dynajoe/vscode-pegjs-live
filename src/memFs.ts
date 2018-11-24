@@ -1,7 +1,5 @@
 // Copied from:
 // https://github.com/Microsoft/vscode-extension-samples/blob/fc3c2f9dae32404e6556cf5bcc0b666fedbc3897/fsprovider-sample/src/extension.ts
-'use strict'
-
 import * as path from 'path'
 import * as vscode from 'vscode'
 
@@ -48,6 +46,9 @@ export class MemFS implements vscode.FileSystemProvider {
    root = new Directory('')
 
    // --- manage file metadata
+   exists(uri: vscode.Uri): boolean {
+      return this._lookup(uri, true) != null
+   }
 
    stat(uri: vscode.Uri): vscode.FileStat {
       return this._lookup(uri, false)

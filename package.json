@@ -17,7 +17,7 @@
     },
     "activationEvents": [
         "onCommand:editor.pegjsLive",
-        "onCommand:editor.pegjsLiveFromHere"
+        "onCommand:editor.pegjsLiveFromRule"
     ],
     "main": "./dist/extension",
     "contributes": {
@@ -27,8 +27,8 @@
                 "title": "PEG.js Live"
             },
             {
-                "command": "editor.pegjsLiveFromHere",
-                "title": "PEG.js Live From Here"
+                "command": "editor.pegjsLiveFromRule",
+                "title": "PEG.js Live from rule under cursor"
             }
         ]
     },
